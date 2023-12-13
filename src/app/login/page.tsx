@@ -25,12 +25,30 @@ async function   handleClick(e:any){
 
     return (
         <div className="h-[100vh] w-full items-center flex relative flex-col  ">
-            <form  onSubmit={handleClick}  className="h-max mb-4 w-[200px] flex flex-col text-center justify-center  " action="submit">
+            <form  
+            onSubmit={handleClick}  
+            className="h-max mb-4 w-[200px] flex flex-col text-center justify-center" 
+            action="submit">
+
                 <label htmlFor="email">Email </label>
-                <input onChange={(e) => setUser({...user , email : e.target.value })} value={user.email} placeholder="Email" className="text-black justify-center" type="text" /><br />
+                <input 
+                onChange={(e) => setUser({...user , email : e.target.value })} 
+                value={user.email}
+                placeholder=" Email" 
+                className="text-black justify-center" 
+                type="text" 
+                /><br />
+
                 <label htmlFor="password">Password </label>
-                <input type="password" className="text-black" onChange={(e) => setUser({...user , password : e.target.value })} value={user.password} placeholder="Password"  />
-                <button type="submit" className="mt-4  border-2 border-white rounded">Submit</button>
+                <input 
+                type="password" 
+                className="text-black" 
+                onChange={(e) => setUser({...user , password : e.target.value })} 
+                value={user.password} 
+                placeholder="Password"  
+                />
+
+                <button type="submit" className="mt-4 border-2 border-white rounded">Submit</button>
             </form>
             <Link href="/signup">Visit Signup Page</Link>
         </div>

@@ -26,12 +26,14 @@ export default  function Signup(){
     
     return (
         <div className="h-[100vh] w-full items-center flex relative flex-col ">
-            <form onSubmit={handleClick} className="h-max mb-4 w-[200px] flex flex-col text-center justify-center align-middle " action="submit">
+            <form onSubmit={handleClick} className="h-max mb-4 w-[200px] flex flex-col text-center 
+            justify-center align-middle " action="submit">
                 
                 <label htmlFor="Username">Username </label>
                 <input 
                 onChange={(e) => setUser({...user , username : e.target.value })} 
-                value={user.username} placeholder="Username" 
+                value={user.username} 
+                placeholder="Username" 
                 className=" justify-center text-black" 
                 type="text" />
                 <br/>
@@ -39,7 +41,8 @@ export default  function Signup(){
                 <label htmlFor="email">Email </label>
                 <input 
                 onChange={(e) => setUser({...user , email : e.target.value })} 
-                value={user.email} placeholder="Email" 
+                value={user.email} 
+                placeholder="Email" 
                 className=" justify-center text-black" 
                 type="text" 
                 />
@@ -55,7 +58,8 @@ export default  function Signup(){
                 />
 
 
-                <button  type="submit"  className="mt-4 border-2 border-white rounded">Submit</button>
+                <button  type="submit"  className="mt-4 border-2 border-white rounded">Submit
+                </button>
             </form>
             <Link href="/login">Visit Login Page</Link>
         </div>
